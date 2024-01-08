@@ -98,7 +98,7 @@ namespace Laba8
                         while (g) 
                         {
                             Console.Clear();
-                            Console.WriteLine("Выберите категорию товаров: \n  1)Gucci \n  2)Dolce & Gabbana \n  3)Prada \n  4)Все бренды \n" +
+                            Console.WriteLine("Выберите категорию товаров: \n  1)Dolce & Gabbana \n  2)Gucci \n  3)Prada \n  4)Все бренды \n" +
                             "Нажмите 0 чтобы вернуться в меню");
                             switch (Console.ReadLine())
                             {
@@ -140,8 +140,8 @@ namespace Laba8
                                             {
                                                if (Analiz == true)
                                                 {
-                                                    cart.Halyava(list);
-                                                    cart.CartAnaliz(list);
+                                                    cart.Halyava();
+                                                    cart.CartAnaliz();
                                                     Console.WriteLine("1)Да\n2)Нет");
                                                     switch (Console.ReadLine())
                                                     {
@@ -169,7 +169,7 @@ namespace Laba8
                                                else
                                                 {
                                                 Console.Clear();
-                                                cart.Halyava(list);
+                                                cart.Halyava();
                                                 Console.Clear();
                                                 Console.WriteLine("Чек:");
                                                     for (int i = 0; i < cart.ShoesStuffs.Count; i++)
@@ -228,8 +228,8 @@ namespace Laba8
                                         {
                                             if (Analiz == true)
                                             {
-                                                cart.Halyava(list);
-                                                cart.CartAnaliz(list);
+                                                cart.Halyava();
+                                                cart.CartAnaliz();
                                                 Console.WriteLine("1)Да\n2)Нет");
                                                 switch (Console.ReadLine())
                                                 {
@@ -256,7 +256,7 @@ namespace Laba8
                                             }
                                             else
                                             {
-                                                cart.Halyava(list);
+                                                cart.Halyava();
                                                 Console.WriteLine("Чек:");
                                                 for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
@@ -313,8 +313,8 @@ namespace Laba8
                                         {
                                             if (Analiz == true)
                                             {
-                                                cart.Halyava(list);
-                                                cart.CartAnaliz(list);
+                                                cart.Halyava();
+                                                cart.CartAnaliz();
                                                 Console.WriteLine("1)Да\n2)Нет");
                                                 switch (Console.ReadLine())
                                                 {
@@ -341,7 +341,7 @@ namespace Laba8
                                             }
                                             else
                                             {
-                                                cart.Halyava(list);
+                                                cart.Halyava();
                                                 Console.WriteLine("Чек:");
                                                 for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
@@ -398,8 +398,8 @@ namespace Laba8
                                         {
                                             if (Analiz == true)
                                             {
-                                                cart.Halyava(list);
-                                                cart.CartAnaliz(list);
+                                                cart.Halyava();
+                                                cart.CartAnaliz();
                                                 Console.WriteLine("1)Да\n2)Нет");
                                                 switch (Console.ReadLine())
                                                 {
@@ -426,7 +426,7 @@ namespace Laba8
                                             }
                                             else
                                             {
-                                                cart.Halyava(list);
+                                                cart.Halyava();
                                                 Console.WriteLine("Чек:");
                                                 for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
