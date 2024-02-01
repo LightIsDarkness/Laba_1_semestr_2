@@ -84,43 +84,82 @@ namespace Laba_1_semestr_2
                 }
             }
             int max = new int[] { Grace1, Expensive1, Convenience1 }.Max();
-            if (Grace1 == max)
+            if ((Grace1 == Expensive1 && Grace1 == max) || (Convenience1 == Grace1 && Grace1 == max) || (Expensive1 == Convenience1 && Expensive1 == max))
             {
-                for (int i = 0; i < Shoes.Count; i++)
-                {
-                    if (Shoes[i].Grace == true && Grace1 == max)
-                    {
-                        AShoes.Add(Shoes[i]);
-                    }
-                }
-                randomShoes = randonGen.Next(0, AShoes.Count-1);
-                Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
-            }
-            if (Expensive1 == max)
-            {
-                for (int i = 0; i < Shoes.Count; i++)
-                {
-                    if (Shoes[i].Expensive == true && Expensive1 == max)
-                    {
-                        AShoes.Add(Shoes[i]);
-                    }
-                }
-                randomShoes = randonGen.Next(0, AShoes.Count-1);
-                Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
-            }
-            if (Convenience1 == max)
-            {
-                for (int i = 0; i < Shoes.Count; i++)
-                {
-                    if (Shoes[i].Convenience == true && Convenience1 == max)
-                    {
-                        AShoes.Add(Shoes[i]);
-                    }
-                }
-               randomShoes = randonGen.Next(0, AShoes.Count-1);
-               Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
-            }
 
+            }
+            else
+            {
+                if (Grace1 == max)
+                {
+                    for (int i = 0; i < Shoes.Count; i++)
+                    {
+                        if (Shoes[i].Grace == true && Grace1 == max)
+                        {
+                            AShoes.Add(Shoes[i]);
+                        }
+                    }
+                    randomShoes = randonGen.Next(0, AShoes.Count - 1);
+                    Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
+                    Console.WriteLine("1)Да\n2)Нет");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            ShoesStuffs.Add(AShoes[randomShoes]);
+                            Console.Clear();
+                            break;
+                        case "2":
+                            Console.Clear();
+                            break;
+                    }
+                }
+                if (Expensive1 == max)
+                {
+                    for (int i = 0; i < Shoes.Count; i++)
+                    {
+                        if (Shoes[i].Expensive == true && Expensive1 == max)
+                        {
+                            AShoes.Add(Shoes[i]);
+                        }
+                    }
+                    randomShoes = randonGen.Next(0, AShoes.Count - 1);
+                    Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
+                    Console.WriteLine("1)Да\n2)Нет");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            ShoesStuffs.Add(AShoes[randomShoes]);
+                            Console.Clear();
+                            break;
+                        case "2":
+                            Console.Clear();
+                            break;
+                    }
+                }
+                if (Convenience1 == max)
+                {
+                    for (int i = 0; i < Shoes.Count; i++)
+                    {
+                        if (Shoes[i].Convenience == true && Convenience1 == max)
+                        {
+                            AShoes.Add(Shoes[i]);
+                        }
+                    }
+                    randomShoes = randonGen.Next(0, AShoes.Count - 1);
+                    Console.WriteLine($"Желаете ли дополнительно приобрести {AShoes[randomShoes].Name} co скидкой 20%?");
+                    Console.WriteLine("1)Да\n2)Нет");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            ShoesStuffs.Add(AShoes[randomShoes]);
+                            Console.Clear();
+                            break;
+                        case "2":
+                            Console.Clear();
+                            break;
+                    }
+                }
+            }
             Grace1 = 0;
             Expensive1 = 0;
             Convenience1 = 0;

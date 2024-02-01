@@ -28,7 +28,7 @@ namespace Laba8
             while (f) 
             {
                 Console.Clear();
-                Console.WriteLine("1)Каталог товаров \n2)Составить продовольственную корзину \n0)Настройки");
+                Console.WriteLine("1)Каталог товаров \n2)Составить корзину \n0)Настройки");
                 switch (Console.ReadLine()) 
                 {
                     case "0":
@@ -121,7 +121,7 @@ namespace Laba8
                                     while (u)
                                     {
                                         y = Int32.Parse(Console.ReadLine());
-                                        if (y != 0 && y!=77 && y != 999)
+                                        if (y != 0 && y != 77 && y != 999 && y <= list.Count)
                                         {
                                             cart.ShoesStuffs.Add(list[y - 1]);
                                             Console.WriteLine("Вы добавили в корзину " + list[y-1].Name);
@@ -142,26 +142,10 @@ namespace Laba8
                                                 {
                                                     cart.Halyava();
                                                     cart.CartAnaliz();
-                                                    Console.WriteLine("1)Да\n2)Нет");
-                                                    switch (Console.ReadLine())
+                                                    Console.WriteLine("Чек:");
+                                                    for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                     {
-                                                        case "1":
-                                                            cart.ShoesStuffs.Add(cart.AShoes[cart.randomShoes]);
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                            for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                            {
-                                                                Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                            }
-                                                            break;
-                                                        case "2":
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                            for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                            {
-                                                                Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                            }
-                                                            break;
+                                                        Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
                                                     }
                                                     Console.ReadKey();
                                                     u = false;
@@ -209,7 +193,7 @@ namespace Laba8
                                     while (u)
                                     {
                                         y = Int32.Parse(Console.ReadLine());
-                                        if (y != 0 && y != 77 && y != 999)
+                                        if (y != 0 && y != 77 && y != 999 && y <=  list.Count)
                                         {
                                             cart.ShoesStuffs.Add(list[y - 1]);
                                             Console.WriteLine("Вы добавили в корзину " + list[y - 1].Name);
@@ -230,26 +214,10 @@ namespace Laba8
                                             {
                                                 cart.Halyava();
                                                 cart.CartAnaliz();
-                                                Console.WriteLine("1)Да\n2)Нет");
-                                                switch (Console.ReadLine())
+                                                Console.WriteLine("Чек:");
+                                                for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
-                                                    case "1":
-                                                        cart.ShoesStuffs.Add(cart.AShoes[cart.randomShoes]);
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
-                                                    case "2":
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
+                                                    Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
                                                 }
                                                 Console.ReadKey();
                                                 u = false;
@@ -294,7 +262,7 @@ namespace Laba8
                                     while (u)
                                     {
                                         y = Int32.Parse(Console.ReadLine());
-                                        if (y != 0 && y != 77 && y != 999)
+                                        if (y != 0 && y != 77 && y != 999 && y <= list.Count)
                                         {
                                             cart.ShoesStuffs.Add(list[y - 1]);
                                             Console.WriteLine("Вы добавили в корзину " + list[y - 1].Name);
@@ -315,26 +283,10 @@ namespace Laba8
                                             {
                                                 cart.Halyava();
                                                 cart.CartAnaliz();
-                                                Console.WriteLine("1)Да\n2)Нет");
-                                                switch (Console.ReadLine())
+                                                Console.WriteLine("Чек:");
+                                                for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
-                                                    case "1":
-                                                        cart.ShoesStuffs.Add(cart.AShoes[cart.randomShoes]);
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
-                                                    case "2":
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
+                                                    Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
                                                 }
                                                 Console.ReadKey();
                                                 u = false;
@@ -379,7 +331,7 @@ namespace Laba8
                                     while (u)
                                     {
                                         y = Int32.Parse(Console.ReadLine());
-                                        if (y != 0 && y!=77 && y != 999)
+                                        if (y != 0 && y!=77 && y != 999 && y<list.Count)
                                         {
                                             cart.ShoesStuffs.Add(list[y - 1]);
                                             Console.WriteLine("Вы добавили в корзину " + list[y - 1].Name);
@@ -400,26 +352,10 @@ namespace Laba8
                                             {
                                                 cart.Halyava();
                                                 cart.CartAnaliz();
-                                                Console.WriteLine("1)Да\n2)Нет");
-                                                switch (Console.ReadLine())
+                                                Console.WriteLine("Чек:");
+                                                for (int i = 0; i < cart.ShoesStuffs.Count; i++)
                                                 {
-                                                    case "1":
-                                                        cart.ShoesStuffs.Add(cart.AShoes[cart.randomShoes]);
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
-                                                    case "2":
-                                                        Console.Clear();
-                                                        Console.WriteLine("Чек:");
-                                                        for (int i = 0; i < cart.ShoesStuffs.Count; i++)
-                                                        {
-                                                            Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
-                                                        }
-                                                        break;
+                                                    Console.WriteLine(cart.ShoesStuffs[i].Name + "\n");
                                                 }
                                                 Console.ReadKey();
                                                 u = false;
