@@ -331,7 +331,7 @@ namespace Laba8
                                     while (u)
                                     {
                                         y = Int32.Parse(Console.ReadLine());
-                                        if (y != 0 && y!=77 && y != 999 && y<list.Count)
+                                        if (y != 0 && y!=77 && y != 999 && y<=list.Count)
                                         {
                                             cart.ShoesStuffs.Add(list[y - 1]);
                                             Console.WriteLine("Вы добавили в корзину " + list[y - 1].Name);
